@@ -7,8 +7,8 @@ function Nav() {
             <img src='#'></img>
         </div>
         <nav>
-            <a href='/accounts/login'>Login</a>
-            <a href='accounts/signin'>Login</a>
+            <a href='/accounts?section=create'>Create Account</a>
+            <a href='/accounts?section=signin'>Signin</a>
         </nav>
     </div>
     

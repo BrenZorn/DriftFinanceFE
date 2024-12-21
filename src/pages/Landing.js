@@ -29,8 +29,8 @@ function Landing() {
             <p>Step 3: Get real-time insights to manage your money effortlessly.</p>
         </div>
         <div>
-            <button>Creat Account</button>
-            <a href='/accounts/login'>Login</a>
+            <a href='/accounts?section=create'><button>Creat Account</button></a>
+            <a href='/accounts?section=login'>Login</a>
         </div>
     </div>
   )
