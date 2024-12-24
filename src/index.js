@@ -3,6 +3,8 @@ import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router";
 import Landing from "./pages/Landing";
 import Authentication from "./pages/Authentication";
+import './styles/index.css'
+import Main from "./pages/Main";
 
 
 const root = document.getElementById("root");
@@ -12,6 +14,7 @@ ReactDOM.createRoot(root).render(
     <Routes>
       <Route path="/" element={<Landing />} />
       <Route path="/accounts" element={<Authentication />} />
+      <Route path="/home" element={<Main />} />
     </Routes>
   </BrowserRouter>
 );
