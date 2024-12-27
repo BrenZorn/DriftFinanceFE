@@ -1,4 +1,5 @@
 import React from 'react'
+import logo from '../images/DriftLogo.png'
 
 function Nav() {
   //if user is signed in display account and logout 
@@ -7,7 +8,7 @@ function Nav() {
     <div className='NavBar'>
         <div className='ImageCard'>
           <a href='/'>
-            <img src='#'></img>
+            <img src={logo}></img>
           </a>
         </div>
         <div className='LinkCard'>

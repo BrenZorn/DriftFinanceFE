@@ -1,0 +1,34 @@
+.NavBar{
+    background-color: #111214;
+    height: 70px; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 15px;
+    padding-right: 15px;
+    .ImageCard{
+        width: 75px;
+        height: 75px;
+        a{
+            width: 100%;
+            height: 100%;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+    .LinkCard{
+        display: flex;
+        justify-content: space-between;
+        width: 175px;
+        height: 20px;
+        a{
+            text-decoration: none;
+            color: #f5f3ed;
+        }
+        a:hover{
+            color: #0094C6;
+        }
+    }
+}

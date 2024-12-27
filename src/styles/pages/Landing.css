@@ -1,0 +1,58 @@
+.MainContainer .MainCard {
+  padding-left: 10px;
+}
+.MainContainer .MainCard .ImageContainer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+.MainContainer .MainCard .ImageContainer img {
+  width: 300px;
+  height: 300px;
+}
+.MainContainer .SecoundaryCard {
+  padding-left: 10px;
+  padding-top: 5px;
+  padding-bottom: 10px;
+  background-color: #111214;
+}
+.MainContainer .SecoundaryCard .ImageContainer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+.MainContainer .SecoundaryCard .ImageContainer img {
+  width: 90%;
+  height: 300px;
+}
+.MainContainer .GettingStartedCard {
+  padding-left: 10px;
+}
+.MainContainer .GettingStartedCard .ImageContainer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+.MainContainer .GettingStartedCard .ImageContainer img {
+  width: 300px;
+  height: 300px;
+}
+.MainContainer .AccountCard {
+  padding-left: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #111214;
+}
+.MainContainer .AccountCard .ImageContainer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+.MainContainer .AccountCard .ImageContainer img {
+  width: 300px;
+  height: 300px;
+}/*# sourceMappingURL=Landing.css.map */

@@ -7,7 +7,7 @@ function Create() {
   const [Email, setEmail] = useState('')
   const [ConfirmPassword, setConfirmPassword] = useState('')
   return (
-    <div className='CreatePage'>
+    <div className='CreateCard'>
       <div className='FormCard'>
         <h1>Create Account</h1>
         <form className='CreateNewUserForm'>

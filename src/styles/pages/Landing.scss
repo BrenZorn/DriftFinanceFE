@@ -1,0 +1,60 @@
+.MainContainer{
+    .MainCard{
+        padding-left: 10px;
+        .ImageContainer{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: start;
+            img{
+                width: 300px;
+                height: 300px;
+            }
+        }
+    }
+    .SecoundaryCard{
+        padding-left: 10px;
+        padding-top: 5px;
+        padding-bottom: 10px;
+        background-color: #111214;
+        .ImageContainer{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: end;
+            img{
+                width: 90%;
+                height: 300px;
+            }
+        }
+    }
+    .GettingStartedCard{
+        padding-left: 10px;
+        .ImageContainer{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: start;
+            img{
+                width: 300px;
+                height: 300px;
+            }
+        }
+    }
+    .AccountCard{
+        padding-left: 10px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        background-color: #111214;
+        .ImageContainer{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: start;
+            img{
+                width: 300px;
+                height: 300px;
+            }
+        }
+    }
+}

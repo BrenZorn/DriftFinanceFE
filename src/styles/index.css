@@ -2,10 +2,22 @@
   background-color: #111214;
   height: 70px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   padding-left: 15px;
   padding-right: 15px;
+}
+.NavBar .ImageCard {
+  width: 75px;
+  height: 75px;
+}
+.NavBar .ImageCard a {
+  width: 100%;
+  height: 100%;
+}
+.NavBar .ImageCard a img {
+  width: 100%;
+  height: 100%;
 }
 .NavBar .LinkCard {
   display: flex;
@@ -21,20 +33,121 @@
   color: #0094C6;
 }
 
-.CreatePage {
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+@media (max-width: 600px) {
+  .CreateCard {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .CreateCard .FormCard {
+    background: gray;
+    height: 350px;
+    width: 85%;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    flex-wrap: wrap;
+  }
+  .CreateCard .FormCard h1 {
+    display: flex;
+    flex-basis: 100%;
+    margin: 0px;
+    padding-left: 30px;
+  }
+  .CreateCard .FormCard .CreateNewUserForm {
+    height: 225px;
+    width: 70%;
+    padding-left: 30px;
+  }
+  .CreateCard .FormCard .CreateNewUserForm label {
+    display: flex;
+    flex-basis: 100%;
+  }
+  .CreateCard .FormCard .CreateNewUserForm input {
+    width: 100%;
+  }
+  .CreateCard .FormCard .CreateNewUserForm .ButtonCard {
+    margin-top: 10px;
+  }
+  .CreateCard .FormCard .CreateNewUserForm .ButtonCard button {
+    background-color: green;
+    border: none;
+    color: #f5f3ed;
+    padding: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 5px;
+    transition: all 0.2s ease-in-out;
+  }
+  .CreateCard .FormCard .CreateNewUserForm .ButtonCard button:hover {
+    background-color: #069406;
+    transform: scale(1.1);
+  }
 }
-.CreatePage .FormCard {
-  background: gray;
-  height: 400px;
+.MainContainer .MainCard {
+  padding-left: 10px;
+}
+.MainContainer .MainCard .ImageContainer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+.MainContainer .MainCard .ImageContainer img {
+  width: 300px;
+  height: 300px;
+}
+.MainContainer .SecoundaryCard {
+  padding-left: 10px;
+  padding-top: 5px;
+  padding-bottom: 10px;
+  background-color: #111214;
+}
+.MainContainer .SecoundaryCard .ImageContainer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+.MainContainer .SecoundaryCard .ImageContainer img {
+  width: 90%;
+  height: 300px;
+}
+.MainContainer .GettingStartedCard {
+  padding-left: 10px;
+}
+.MainContainer .GettingStartedCard .ImageContainer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+.MainContainer .GettingStartedCard .ImageContainer img {
+  width: 300px;
+  height: 300px;
+}
+.MainContainer .AccountCard {
+  padding-left: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #111214;
+}
+.MainContainer .AccountCard .ImageContainer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+.MainContainer .AccountCard .ImageContainer img {
+  width: 300px;
+  height: 300px;
 }
 
 body {
-  background-color: #090A0C;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  background-color: #031022;
   color: #f5f3ed;
   margin: 0px;
 }
@@ -46,54 +159,8 @@ body a:hover {
   color: #0094C6;
 }
 
-.CreatePage {
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.CreatePage .FormCard {
-  background: gray;
-  height: 350px;
-  width: 85%;
-  display: flex;
-  align-items: center;
-  border-radius: 10px;
-  flex-wrap: wrap;
-}
-.CreatePage .FormCard h1 {
-  display: flex;
-  flex-basis: 100%;
-  margin: 0px;
-  padding-left: 30px;
-}
-.CreatePage .FormCard .CreateNewUserForm {
-  height: 225px;
-  width: 70%;
-  padding-left: 30px;
-}
-.CreatePage .FormCard .CreateNewUserForm label {
-  display: flex;
-  flex-basis: 100%;
-}
-.CreatePage .FormCard .CreateNewUserForm input {
-  width: 100%;
-}
-.CreatePage .FormCard .CreateNewUserForm .ButtonCard {
-  margin-top: 10px;
-}
-.CreatePage .FormCard .CreateNewUserForm .ButtonCard button {
-  background-color: green;
-  border: none;
-  color: #f5f3ed;
-  padding: 5px;
-  padding-left: 15px;
-  padding-right: 15px;
-  border-radius: 5px;
-  transition: all 0.2s ease-in-out;
-}
-.CreatePage .FormCard .CreateNewUserForm .ButtonCard button:hover {
-  background-color: #069406;
-  transform: scale(1.1);
+@media (max-width: 600px) {
+  body {
+    background-color: #0094C6;
+  }
 }/*# sourceMappingURL=index.css.map */
