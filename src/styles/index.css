@@ -42,109 +42,120 @@
     align-items: center;
   }
   .CreateCard .FormCard {
-    background: gray;
+    background-color: #161616;
+    width: 300px;
     height: 350px;
-    width: 85%;
     display: flex;
-    align-items: center;
-    border-radius: 10px;
     flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: center;
+    border-radius: 20px;
   }
   .CreateCard .FormCard h1 {
-    display: flex;
-    flex-basis: 100%;
-    margin: 0px;
-    padding-left: 30px;
+    height: 40px;
+    flex-basis: 90%;
+    text-align: center;
   }
   .CreateCard .FormCard .CreateNewUserForm {
-    height: 225px;
-    width: 70%;
-    padding-left: 30px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
   .CreateCard .FormCard .CreateNewUserForm label {
-    display: flex;
-    flex-basis: 100%;
+    flex-basis: 250px;
+    margin-top: 5px;
   }
   .CreateCard .FormCard .CreateNewUserForm input {
-    width: 100%;
+    width: 250px;
+    border: none;
+    padding: 0px;
+    margin-top: 2px;
+    height: 20px;
+    border-radius: 8px;
+    padding-left: 5px;
   }
   .CreateCard .FormCard .CreateNewUserForm .ButtonCard {
-    margin-top: 10px;
+    margin-top: 25px;
+    flex-basis: 250px;
+    display: flex;
+    justify-content: space-around;
   }
   .CreateCard .FormCard .CreateNewUserForm .ButtonCard button {
-    background-color: green;
+    border-radius: 10px;
     border: none;
+    height: 35px;
+    width: 115px;
+    font-size: 14px;
     color: #f5f3ed;
-    padding: 5px;
-    padding-left: 15px;
-    padding-right: 15px;
-    border-radius: 5px;
-    transition: all 0.2s ease-in-out;
   }
-  .CreateCard .FormCard .CreateNewUserForm .ButtonCard button:hover {
-    background-color: #069406;
-    transform: scale(1.1);
+  .CreateCard .FormCard .CreateNewUserForm .ButtonCard .CreatAccount {
+    background-color: rgb(19, 185, 19);
+  }
+  .CreateCard .FormCard .CreateNewUserForm .ButtonCard .Login {
+    background-color: #0094C6;
   }
 }
-.MainContainer .MainCard {
-  padding-left: 10px;
+@media (max-width: 600px) {
+  .MainContainer .MainCard {
+    padding-left: 10px;
+  }
+  .MainContainer .MainCard .ImageContainer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+  }
+  .MainContainer .MainCard .ImageContainer img {
+    width: 300px;
+    height: 300px;
+  }
+  .MainContainer .SecoundaryCard {
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    background-color: #111214;
+  }
+  .MainContainer .SecoundaryCard .ImageContainer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+  }
+  .MainContainer .SecoundaryCard .ImageContainer img {
+    width: 100%;
+    height: 300px;
+  }
+  .MainContainer .GettingStartedCard {
+    padding-left: 10px;
+  }
+  .MainContainer .GettingStartedCard .ImageContainer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+  }
+  .MainContainer .GettingStartedCard .ImageContainer img {
+    width: 300px;
+    height: 300px;
+  }
+  .MainContainer .AccountCard {
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #111214;
+  }
+  .MainContainer .AccountCard .ImageContainer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+  }
+  .MainContainer .AccountCard .ImageContainer img {
+    width: 300px;
+    height: 300px;
+  }
 }
-.MainContainer .MainCard .ImageContainer {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: start;
-}
-.MainContainer .MainCard .ImageContainer img {
-  width: 300px;
-  height: 300px;
-}
-.MainContainer .SecoundaryCard {
-  padding-left: 10px;
-  padding-top: 5px;
-  padding-bottom: 10px;
-  background-color: #111214;
-}
-.MainContainer .SecoundaryCard .ImageContainer {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: end;
-}
-.MainContainer .SecoundaryCard .ImageContainer img {
-  width: 90%;
-  height: 300px;
-}
-.MainContainer .GettingStartedCard {
-  padding-left: 10px;
-}
-.MainContainer .GettingStartedCard .ImageContainer {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: start;
-}
-.MainContainer .GettingStartedCard .ImageContainer img {
-  width: 300px;
-  height: 300px;
-}
-.MainContainer .AccountCard {
-  padding-left: 10px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  background-color: #111214;
-}
-.MainContainer .AccountCard .ImageContainer {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: start;
-}
-.MainContainer .AccountCard .ImageContainer img {
-  width: 300px;
-  height: 300px;
-}
-
 body {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   background-color: #031022;

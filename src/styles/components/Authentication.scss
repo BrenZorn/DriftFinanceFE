@@ -6,49 +6,59 @@
         justify-content: center;
         align-items: center;
         .FormCard{
-            background: gray;
+            background-color: #161616;
+            width: 300px;
             height: 350px;
-            width: 85%;
             display: flex;
-            align-items: center;
-            border-radius: 10px;
             flex-wrap: wrap;
+            align-content: flex-start;
+            justify-content: center;
+            border-radius: 20px;
             h1{
-                display: flex;
-                flex-basis: 100%;
-                margin: 0px;
-                padding-left: 30px;
+                height: 40px;
+                flex-basis: 90%;
+                text-align: center;
+                
             }
             .CreateNewUserForm{
-                height: 225px;
-                width: 70%;
-                padding-left: 30px;
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
                 label{
-                    display: flex;
-                    flex-basis: 100%;
+                    flex-basis: 250px;
+                    margin-top: 5px;
                 }
                 input{
-                    width: 100%;
+                    width: 250px;
+                    border: none;
+                    padding: 0px;
+                    margin-top: 2px;
+                    height: 20px;
+                    border-radius: 8px;
+                    padding-left: 5px;
                 }
                 .ButtonCard{
-                    margin-top: 10px;
+                    margin-top: 25px;
+                    flex-basis: 250px;
+                    display: flex;
+                    justify-content: space-around;
                     button{
-                        background-color: green;
+                        border-radius: 10px;
                         border: none;
+                        height: 35px;
+                        width: 115px;
+                        font-size: 14px;
                         color: #f5f3ed;
-                        padding: 5px;
-                        padding-left: 15px;
-                        padding-right: 15px;
-                        border-radius: 5px;
-                        transition: all .2s ease-in-out; 
                     }
-                    button:hover{
-                        background-color: #069406;
-                        transform: scale(1.1); 
+                    .CreatAccount{
+                        background-color: rgb(19, 185, 19);
+                    }
+                    .Login{
+                        background-color: #0094C6;
                     }
                 }
             }
-            
         }
     }
 }

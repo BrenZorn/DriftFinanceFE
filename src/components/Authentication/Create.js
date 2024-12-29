@@ -20,7 +20,8 @@ function Create() {
           <label>Confirm Password</label>
           <input type='password' onChange={(e)=>setConfirmPassword(e.target.value)} placeholder='Confirm Password'></input>
           <div className='ButtonCard'>
-            <button>Create Account</button>
+            <button className='CreatAccount'>Create Account</button>
+            <button className='Login'>Login</button>
           </div>
         </form>
       </div>
