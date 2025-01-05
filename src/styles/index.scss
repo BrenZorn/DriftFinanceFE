@@ -12,11 +12,88 @@ body{
         color: #f5f3ed;
     }
     a:hover{
-        color: #0094C6;
+        color: #65cef1;
     }
 }
 
-
+.CreateCard{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .FormCard{
+        background-color: #161616;
+        width: 300px;
+        height: 350px;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: flex-start;
+        justify-content: center;
+        border-radius: 20px;
+        h1{
+            height: 40px;
+            flex-basis: 90%;
+            text-align: center;
+            
+        }
+        .CreateNewUserForm{
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            label{
+                flex-basis: 250px;
+                margin-top: 5px;
+            }
+            input{
+                width: 250px;
+                border: none;
+                padding: 0px;
+                margin-top: 2px;
+                height: 20px;
+                border-radius: 8px;
+                padding-left: 5px;
+            }
+            .ButtonCard{
+                margin-top: 25px;
+                flex-basis: 250px;
+                display: flex;
+                justify-content: space-around;
+                button{
+                    border-radius: 10px;
+                    border: none;
+                    height: 35px;
+                    width: 115px;
+                    font-size: 14px;
+                    color: #f5f3ed;
+                }
+                .CreatAccount{
+                    background-color: rgb(19, 148, 19);
+                }
+                .CreatAccount:hover{
+                    background-color: rgb(21, 196, 21);
+                }
+                .Login{
+                    background-color: #0094C6;
+                    width: 75px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 10px;
+                    border: none;
+                    height: 35px;
+                    width: 115px;
+                    font-size: 14px;
+                    color: #f5f3ed;
+                }
+                .Login:hover{
+                    background-color: #0fb2e9;
+                }
+            }
+        }
+    }
+}
 
 //Exta Small
 @media (max-width:600px) { 
