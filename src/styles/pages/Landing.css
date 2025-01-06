@@ -1,14 +1,22 @@
-@media (max-width: 600px) {
-  .MainContainer .MainCard {
-    padding-left: 10px;
+@media (max-width: 500px) {
+  .MainContainer .Header {
+    font-size: 20px;
   }
-  .MainContainer .MainCard .ImageContainer {
+  .MainContainer h1 {
+    padding-left: 5px;
+    font-size: 50px;
+  }
+  .MainContainer .Content {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  .MainContainer .MainCard .Content .ImageContainer {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: start;
   }
-  .MainContainer .MainCard .ImageContainer img {
+  .MainContainer .MainCard .Content .ImageContainer img {
     width: 300px;
     height: 300px;
   }
@@ -25,11 +33,15 @@
     justify-content: end;
   }
   .MainContainer .SecoundaryCard .ImageContainer img {
-    width: 100%;
-    height: 300px;
+    -o-object-fit: contain;
+       object-fit: contain;
+    min-width: 100px;
+    height: 200px;
   }
   .MainContainer .GettingStartedCard {
-    padding-left: 10px;
+    padding-left: 20px;
+    margin-bottom: 15px;
+    margin-top: 15px;
   }
   .MainContainer .GettingStartedCard .ImageContainer {
     width: 100%;
@@ -41,20 +53,46 @@
     width: 300px;
     height: 300px;
   }
+  .MainContainer .GettingStartedCard .Content {
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .MainContainer .GettingStartedCard .Content .Header {
+    flex-basis: 100%;
+  }
   .MainContainer .AccountCard {
-    padding-left: 10px;
-    padding-top: 10px;
+    padding-top: 20px;
     padding-bottom: 10px;
     background-color: #111214;
-  }
-  .MainContainer .AccountCard .ImageContainer {
-    width: 100%;
+    height: 50px;
     display: flex;
+    justify-content: center;
     align-items: center;
-    justify-content: start;
   }
-  .MainContainer .AccountCard .ImageContainer img {
-    width: 300px;
-    height: 300px;
+  .MainContainer .AccountCard .Container {
+    width: 250px;
+    display: flex;
+    justify-content: space-evenly;
+    align-self: center;
+  }
+  .MainContainer .AccountCard .Container .Create {
+    background-color: #139413;
+    padding: 5px;
+    border-radius: 7px;
+  }
+  .MainContainer .AccountCard .Container .Create:hover {
+    background-color: #15c415;
+  }
+  .MainContainer .AccountCard .Container .Login {
+    background-color: #0094C6;
+    padding: 5px;
+    border-radius: 7px;
+    width: 75px;
+    text-align: center;
+  }
+  .MainContainer .AccountCard .Container .Login:hover {
+    background-color: #0fb2e9;
   }
 }/*# sourceMappingURL=Landing.css.map */

@@ -12,17 +12,21 @@ function Login() {
   const navigate = useNavigate()
 
   const userLogin = async (Email, Password)=>{ 
-    console.log(Email, Password)
-    let request = await axios.post('http://localhost:3001/Authentication/signin',{
-      data:{
-        email: Email,
-        password: Password
-      },
-    })
-    console.log(request)
-    //set jwt in cookies so we can use the jwt later as a api access token
-
-    navigate('/home')
+    try{
+      let request = await axios.post('http://localhost:3001/Authentication/signin',{
+        data:{
+          email: Email,
+          password: Password
+        },
+      })
+      let jwt = request.data.token 
+      document.cookie = jwt
+      console.log(document.cookie)
+      navigate('/main')
+    }catch(err){
+      //set error message
+      console.log(err.response.data.errorMessage)
+    }
   }
 
   return (

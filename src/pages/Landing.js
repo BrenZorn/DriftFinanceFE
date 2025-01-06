@@ -13,7 +13,7 @@ function Landing() {
             <h1>Drift Finance</h1>
             <div className='MainCard'>
                 <div className='Content'>
-                    <p>Take Control of Your Finances Today</p>
+                    <p className='Header'>Take Control of Your Finances Today</p>
                     <div className='ImageContainer'>
                         <img src={image1}></img>
                     </div>
@@ -23,7 +23,7 @@ function Landing() {
             </div>
             <div className='SecoundaryCard'>
                 <div className='Content'>
-                    <p>Why Choose Drift Finance?</p>
+                    <p className='Header'>Why Choose Drift Finance?</p>
                     <p>Track Spending in Real-Time.</p>
                     <p>Personalized Budgeting Tools to create customized budgets that are tailored to your needs and lifestyle.</p>
                     <p>Smart Savings Goals to help achievable savings goals and monitor your progress with clear, actionable insights.</p>
@@ -38,18 +38,17 @@ function Landing() {
                     <img src={image3}></img>
                 </div>
                 <div className='Content'>
-                    <p>Getting Started is Simple</p>
-                    <p>Step 1 - Create an account with just a few click.</p>
-                    <p>Step 2 - Set up budgets and savings goals in minutes.</p>
-                    <p>Step 3 - Get real-time insights to manage your money effortlessly.</p>
+                    <p className='Header'>Getting Started is Simple</p>
+                    <p>Create an account with just a few click.</p>
+                    <p>Set up budgets and savings goals in minutes.</p>
+                    <p>Get real-time insights to manage your budgets effortlessly.</p>
                 </div>
             </div>
             <div className='AccountCard'>
-                <div className='ImageContainer'>
-                    <img src={image2}></img>
+                <div className='Container'>
+                    <a href='/accounts?section=create' className='Create'>Creat Account</a>
+                    <a href='/accounts?section=login' className='Login'>Login</a> 
                 </div>
-                <a href='/accounts?section=create'><button>Creat Account</button></a>
-                <a href='/accounts?section=login'>Login</a>
             </div>
         </div>
     </div>  

@@ -2,6 +2,10 @@ import React from 'react'
 import Nav from '../components/nav'
 
 function Main() {
+    //api call to get user data to display on main page
+    //set up global state to hold current user info 
+
+
   return (
     <div>
         <Nav />
