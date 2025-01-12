@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import axios from 'axios'
 import { useNavigate } from "react-router-dom";
+import { useDispatch } from 'react-redux';
+import { addUser } from '../../redux/slice/userInfo';
 
 
 
@@ -10,6 +12,8 @@ function Login() {
   const [Email, setEmail] = useState('')
   const [Password, setPassword] = useState('')
   const navigate = useNavigate()
+
+  const dispatch = useDispatch()
 
   const userLogin = async (Email, Password)=>{ 
     try{
@@ -22,6 +26,9 @@ function Login() {
       let jwt = request.data.token 
       document.cookie = jwt
       console.log(document.cookie)
+      //add request.data.userInfo to global state
+      console.log(request.data.userInfo)
+      dispatch(addUser(request.data.userInfo))
       navigate('/main')
     }catch(err){
       //set error message

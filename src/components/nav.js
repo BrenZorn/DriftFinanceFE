@@ -1,14 +1,15 @@
 import React from 'react'
 import logo from '../images/DriftLogo.png'
+import { Link } from 'react-router-dom'
 
 const AuthUserDisplay = ()=>{
-  return <div><a href='/accounts/account'>Account</a></div>
+  return <div><Link to='/accounts/account'>Account</Link></div>
 }
 
 const UnAuthUserDisplay = ()=>{
   return <div className='LinkCard'>
-            <a href='/accounts?section=create'>Create Account</a>
-            <a href='/accounts?section=signin'>Signin</a>
+            <Link to='/accounts?section=create'>Create Account</Link>
+            <Link to='/accounts?section=signin'>Signin</Link>
           </div>
 }
 
@@ -20,13 +21,13 @@ function Nav() {
       <div className='ImageCard'>
       {
         cookie.length > 1 ? 
-        <a href='/main'>
+        <Link to='/main'>
           <img src={logo}></img>
-        </a> 
+        </Link> 
         : 
-        <a href='/'>
+        <Link to='/'>
           <img src={logo}></img>
-        </a>
+        </Link>
       }
       </div>
         {

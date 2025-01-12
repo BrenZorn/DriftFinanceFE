@@ -1,16 +1,17 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Nav from '../components/nav'
+import { useSelector } from 'react-redux'
+
+
 
 function Main() {
-    //api call to get user data to display on main page
-    //set up global state to hold current user info 
-
-
+    const {user} = useSelector(state=>state.user)
+    console.log(user)
   return (
     <div>
         <Nav />
         <div>
-            <h1>Welcome Back {}</h1>
+            <h1>Welcome Back {user.username}</h1>
         </div>
         <div>
             accounts

@@ -45,6 +45,9 @@
     padding-left: 5px;
     padding-right: 5px;
   }
+  .MainContainer .MainCard .Content {
+    padding-left: 20px;
+  }
   .MainContainer .MainCard .Content .ImageContainer {
     width: 100%;
     display: flex;
