@@ -1,6 +1,7 @@
 import React from 'react'
 import logo from '../images/DriftLogo.png'
 import { Link } from 'react-router-dom'
+import isCookieExpired from '../helpers/isCookieExpired'
 
 const AuthUserDisplay = ()=>{
   return <div><Link to='/accounts/account'>Account</Link></div>
@@ -14,13 +15,12 @@ const UnAuthUserDisplay = ()=>{
 }
 
 function Nav() {
-  //if user is signed in display account and logout 
-  let cookie = document.cookie
+  let isCookieExpiredValue = isCookieExpired("JWT")
   return (
     <div className='NavBar'>
       <div className='ImageCard'>
       {
-        cookie.length > 1 ? 
+        !isCookieExpiredValue ? 
         <Link to='/main'>
           <img src={logo}></img>
         </Link> 
@@ -31,7 +31,7 @@ function Nav() {
       }
       </div>
         {
-          cookie.length > 1 ? <AuthUserDisplay /> : <UnAuthUserDisplay />
+          !isCookieExpiredValue ? <AuthUserDisplay /> : <UnAuthUserDisplay />
         }
     </div>
     

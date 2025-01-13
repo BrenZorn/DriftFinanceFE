@@ -5,6 +5,8 @@ import image3 from '../images/PiggyBank.png'
 import image4 from '../images/3d-render-hand-with-coins-bills-isolated-set.png'
 
 function Landing() {
+    //check if cookie has expiered
+    
   return (
     <div>
         <Nav />

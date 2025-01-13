@@ -3,7 +3,7 @@ import axios from 'axios'
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from 'react-redux';
 import { addUser } from '../../redux/slice/userInfo';
-
+import Cookies from 'js-cookie';
 
 
 
@@ -23,16 +23,14 @@ function Login() {
           password: Password
         },
       })
-      let jwt = request.data.token 
-      document.cookie = jwt
-      console.log(document.cookie)
-      //add request.data.userInfo to global state
+      console.log(request.data.token)
+      Cookies.set('JWT', JSON.stringify({ data: request.data.token, expiration: new Date(Date.now() + 3600 * 2000) }), { expires: 1 });
       console.log(request.data.userInfo)
       dispatch(addUser(request.data.userInfo))
       navigate('/main')
     }catch(err){
       //set error message
-      console.log(err.response.data.errorMessage)
+      console.log(err)
     }
   }
 
