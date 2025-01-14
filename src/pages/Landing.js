@@ -1,10 +1,20 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Nav from '../components/nav'
 import image1 from '../images/rb_3896.png'
 import image3 from '../images/PiggyBank.png'
 import image4 from '../images/3d-render-hand-with-coins-bills-isolated-set.png'
+import isCookieExpired from '../helpers/isCookieExpired'
+import { useNavigate } from 'react-router-dom'
 
 function Landing() {
+    const navigate = useNavigate()
+    useEffect(()=>{
+        let cookie = isCookieExpired('JWT')
+        console.log(cookie)
+        if(!cookie){
+            navigate('/main')
+        }
+    },[])
     //check if cookie has expiered
     
   return (
