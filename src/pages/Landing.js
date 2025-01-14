@@ -15,8 +15,7 @@ function Landing() {
             navigate('/main')
         }
     },[])
-    //check if cookie has expiered
-    
+
   return (
     <div>
         <Nav />

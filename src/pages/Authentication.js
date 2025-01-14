@@ -2,6 +2,7 @@ import React from 'react'
 import Nav from '../components/nav'
 import Login from '../components/Authentication/Login'
 import Create from '../components/Authentication/Create'
+import { useParams } from 'react-router-dom';
 
 function getQueryVariable(variable)
 {
@@ -15,7 +16,7 @@ function getQueryVariable(variable)
 }
 
 function Authentication() {
-  let section = getQueryVariable('section');
+  const {section} = useParams()
   return (
     <div>
       <Nav />

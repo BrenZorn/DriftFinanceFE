@@ -9,8 +9,8 @@ const AuthUserDisplay = ()=>{
 
 const UnAuthUserDisplay = ()=>{
   return <div className='LinkCard'>
-            <Link to='/accounts?section=create'>Create Account</Link>
-            <Link to='/accounts?section=signin'>Signin</Link>
+            <Link to='/accounts/create'>Create Account</Link>
+            <Link to='/accounts/signin'>Signin</Link>
           </div>
 }
 

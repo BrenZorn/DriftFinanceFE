@@ -17,7 +17,7 @@ ReactDOM.createRoot(root).render(
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Landing />} />
-        <Route path="/accounts" element={<Authentication />} />
+        <Route path="/accounts/:section" element={<Authentication />} />
         <Route path="/main" element={<Main />} />
       </Routes>
     </BrowserRouter>
