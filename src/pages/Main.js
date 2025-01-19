@@ -6,6 +6,9 @@ import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
 import Cookies from 'js-cookie';
 import { addUser } from '../redux/slice/userInfo'
+import IncomeTracker from '../components/MainPage/IncomeTracker'
+import PieChart from '../components/MainPage/PieChart'
+import Trackers from '../components/MainPage/Trackers'
 
 
 //check if  jwt is expired ~
@@ -39,7 +42,7 @@ function Main() {
             }
             
         }else{
-            navigate('/accounts?section=signin')
+            navigate('/accounts/signin')
         }
     },[])
     
@@ -49,15 +52,9 @@ function Main() {
         <div>
             <h1>Welcome Back {user.UserName}</h1>
         </div>
-        <div>
-            accounts
-        </div>
-        <div>
-            pie chart
-        </div>
-        <div>
-            trackers
-        </div>
+        <IncomeTracker />
+        <PieChart />
+        <Trackers />
     </div>
   )
 }

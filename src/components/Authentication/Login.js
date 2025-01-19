@@ -23,9 +23,7 @@ function Login() {
           password: Password
         },
       })
-      console.log(request.data.token)
       Cookies.set('JWT', JSON.stringify({ data: request.data.token, expiration: new Date(Date.now() + 3600 * 2000) }), { expires: 1 });
-      console.log(request.data.userInfo)
       dispatch(addUser(request.data.userInfo))
       navigate('/main')
     }catch(err){
