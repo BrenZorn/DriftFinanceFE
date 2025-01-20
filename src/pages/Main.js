@@ -30,6 +30,7 @@ function Main() {
                 }else{
                     const cookieValue = Cookies.get("JWT");
                     let cookie = JSON.parse(cookieValue)
+                    console.log(cookie.data)
                     axios.get("http://localhost:3001/main/currentUser",{headers : {"Authorization" : `Bearer ${cookie.data}`}})
                     .then(res => {
                         dispatch(addUser(res.data))
