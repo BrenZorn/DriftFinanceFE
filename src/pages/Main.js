@@ -1,11 +1,14 @@
 import React, { useEffect } from 'react'
-import Nav from '../components/nav'
 import { useDispatch, useSelector } from 'react-redux'
 import isCookieExpired from '../helpers/isCookieExpired'
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
 import Cookies from 'js-cookie';
+
+
 import { addUser } from '../redux/slice/userInfo'
+
+import Nav from '../components/nav'
 import IncomeTracker from '../components/MainPage/IncomeTracker'
 import PieChart from '../components/MainPage/PieChart'
 import Trackers from '../components/MainPage/Trackers'
