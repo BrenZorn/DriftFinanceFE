@@ -6,6 +6,7 @@ import { updateUserIncome } from '../../redux/slice/income';
 
 
 function IncomeTracker() {
+
   const [income, setIncome] = useState()
   const [error, setError] = useState(false)
   const [update, setUpdate] = useState(false)  
@@ -41,13 +42,15 @@ function IncomeTracker() {
       console.log('error')
     }
   }
+
+
   return (
     <div className='IncomeTrackerContainer'>
         <div className='MonthlyIncomeContainer'>
             <h1>Monthly Income</h1>
             {
               userIncome == 0 && 
-              <div>
+              <div className='IncomeContainer'>
                 <input placeholder='income' onChange={(e)=>{setIncome(e.target.value)}}></input>
                 <button  onClick={(e)=>{e.preventDefault(); updateIncome()}}>Add</button>
                 {
@@ -62,18 +65,20 @@ function IncomeTracker() {
                 {
                   update 
                   ? 
-                  <div>
-                    <input placeholder='income' onChange={(e)=>{setIncome(e.target.value)}}></input>
-                    <button  onClick={(e)=>{e.preventDefault(); updateIncome();}}>Add</button>
-                    <button  onClick={(e)=>{e.preventDefault(); setUpdate(false)}}>Cancel</button>
+                  <div className='IncomeContainer'>
+                    <input className='IncomeInput' placeholder='income' onChange={(e)=>{setIncome(e.target.value)}}></input>
+                    <div className='ButtonContainer'>
+                      <button className='AddButton' onClick={(e)=>{e. preventDefault(); updateIncome();}}>Add</button>
+                      <button className='CancelButton' onClick={(e)=>{e.  preventDefault(); setUpdate(false)}}>Cancel</button>
+                    </div>
                     {
                       error && <p>Must enter a number</p>
                     }
                   </div> 
                   : 
-                  <div>
+                  <div className='IncomeContainer'>
                     <p>${userIncome}</p>
-                    <button onClick={(e)=>{e.preventDefault(); setUpdate(true);}}>Update Income</button>
+                    <button className="UpdateButton" onClick={(e)=>{e.preventDefault(); setUpdate(true);}}>Update Income</button>
                   </div>
                 }
                 
@@ -88,40 +93,5 @@ function IncomeTracker() {
     </div>
   )
 }
-
-/* 
-{
-              userIncome > 0 
-              ? 
-              <div>
-                <p>${userIncome}</p>
-                <button onClick={(e)=>{e.preventDefault(); setUpdate(true); dispatch(updateUserIncome(0))}}>Update Income</button>
-              </div>
-              : 
-              <div>
-                {
-                  update 
-                  ?
-                  <div>
-                    <input placeholder='income' onChange={(e)=>{setIncome(e.target.value)}}></input>
-                    <button  onClick={(e)=>{e.preventDefault(); updateIncome()}}>Add</button>
-                    <button  onClick={(e)=>{e.preventDefault(); setUpdate(false)}}>Cancel</button>
-                    {
-                      error && <p>Must enter a number</p>
-                    }
-                  </div> 
-                  :
-                  <div>
-                    <input placeholder='income' onChange={(e)=>{setIncome(e.target.value)}}></input>
-                    <button  onClick={(e)=>{e.preventDefault(); updateIncome()}}>Add</button>
-                    {
-                      error && <p>Must enter a number</p>
-                    }
-                  </div>
-                }
-
-              </div>
-            }
-*/
 
 export default IncomeTracker

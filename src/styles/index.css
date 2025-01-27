@@ -134,6 +134,169 @@
     background-color: #0fb2e9;
   }
 }
+.IncomeTrackerContainer {
+  margin-bottom: 50px;
+}
+.IncomeTrackerContainer .MonthlyIncomeContainer {
+  padding-left: 20px;
+  padding-bottom: 10px;
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  border: 1px solid #2a2a2a;
+  transition: all 0.3s ease;
+  margin-left: 25px;
+  width: 80%;
+  max-width: 350px;
+}
+.IncomeTrackerContainer .MonthlyIncomeContainer:hover {
+  background-color: #272727;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  transform: translateY(-2px);
+}
+.IncomeTrackerContainer .MonthlyIncomeContainer h1 {
+  font-size: 25px;
+}
+.IncomeTrackerContainer .MonthlyIncomeContainer .IncomeContainer {
+  height: 100px;
+}
+.IncomeTrackerContainer .MonthlyIncomeContainer .IncomeContainer p {
+  font-size: 25px;
+  font-weight: normal;
+  margin-bottom: 16px;
+}
+.IncomeTrackerContainer .MonthlyIncomeContainer .IncomeContainer .IncomeInput {
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+  padding: 12px 16px;
+  font-size: 16px;
+  border: 1px solid #2a2a2a;
+  border-radius: 8px;
+  outline: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  width: 70%;
+  margin-bottom: 15px;
+}
+.IncomeTrackerContainer .MonthlyIncomeContainer .IncomeContainer .IncomeInput::-moz-placeholder {
+  color: #888888;
+  font-style: italic;
+}
+.IncomeTrackerContainer .MonthlyIncomeContainer .IncomeContainer .IncomeInput::placeholder {
+  color: #888888;
+  font-style: italic;
+}
+.IncomeTrackerContainer .MonthlyIncomeContainer .IncomeContainer .IncomeInput:focus {
+  border-color: #00c4cc;
+  box-shadow: 0 0 8px #00c4cc;
+  background-color: #262626;
+}
+.IncomeTrackerContainer .MonthlyIncomeContainer .IncomeContainer .IncomeInput:hover {
+  border-color: #444444;
+}
+.IncomeTrackerContainer .MonthlyIncomeContainer .IncomeContainer .IncomeInput:disabled {
+  background-color: #333333;
+  color: #777777;
+  border-color: #444444;
+  cursor: not-allowed;
+}
+.IncomeTrackerContainer .MonthlyIncomeContainer .IncomeContainer .UpdateButton {
+  background-color: #1f1f1f;
+  color: #ffffff;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  border: 2px solid #3a3a3a;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+.IncomeTrackerContainer .MonthlyIncomeContainer .IncomeContainer .UpdateButton:hover {
+  background-color: #3a3a3a;
+  color: #00c4cc;
+  border-color: #00c4cc;
+  transform: scale(1.05);
+}
+.IncomeTrackerContainer .MonthlyIncomeContainer .IncomeContainer .UpdateButton:active {
+  background-color: #2a2a2a;
+  transform: scale(1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+.IncomeTrackerContainer .MonthlyIncomeContainer .IncomeContainer .UpdateButton:disabled {
+  background-color: #444444;
+  color: #888888;
+  cursor: not-allowed;
+  opacity: 0.6;
+  box-shadow: none;
+}
+.IncomeTrackerContainer .MonthlyIncomeContainer .IncomeContainer .ButtonContainer {
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+}
+.IncomeTrackerContainer .MonthlyIncomeContainer .IncomeContainer .CancelButton {
+  background-color: #1f1f1f;
+  color: #ffffff;
+  padding: 10px 20px;
+  font-size: 13px;
+  font-weight: 600;
+  border: 2px solid #3a3a3a;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+.IncomeTrackerContainer .MonthlyIncomeContainer .IncomeContainer .CancelButton:hover {
+  background-color: #3a3a3a;
+  color: #cc001b;
+  border-color: #cc001b;
+  transform: scale(1.05);
+}
+.IncomeTrackerContainer .MonthlyIncomeContainer .IncomeContainer .CancelButton:active {
+  background-color: #2a2a2a;
+  transform: scale(1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+.IncomeTrackerContainer .MonthlyIncomeContainer .IncomeContainer .CancelButton:disabled {
+  background-color: #444444;
+  color: #888888;
+  cursor: not-allowed;
+  opacity: 0.6;
+  box-shadow: none;
+}
+.IncomeTrackerContainer .MonthlyIncomeContainer .IncomeContainer .AddButton {
+  background-color: #1f1f1f;
+  color: #ffffff;
+  padding: 10px 20px;
+  font-size: 13px;
+  font-weight: 600;
+  border: 2px solid #3a3a3a;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+.IncomeTrackerContainer .MonthlyIncomeContainer .IncomeContainer .AddButton:hover {
+  background-color: #3a3a3a;
+  color: #1abe28;
+  border-color: #1abe28;
+  transform: scale(1.05);
+}
+.IncomeTrackerContainer .MonthlyIncomeContainer .IncomeContainer .AddButton:active {
+  background-color: #2a2a2a;
+  transform: scale(1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+.IncomeTrackerContainer .MonthlyIncomeContainer .IncomeContainer .AddButton:disabled {
+  background-color: #444444;
+  color: #888888;
+  cursor: not-allowed;
+  opacity: 0.6;
+  box-shadow: none;
+}
+
 body {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   background-color: #031022;

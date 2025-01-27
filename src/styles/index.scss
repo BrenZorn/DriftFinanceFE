@@ -1,6 +1,7 @@
 @use './components/NavBar';
 @use './components/Authentication';
 @use './pages/Landing';
+@use './components/IncomeTracker';
 
 body{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
