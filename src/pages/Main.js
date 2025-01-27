@@ -12,13 +12,7 @@ import Nav from '../components/nav'
 import IncomeTracker from '../components/MainPage/IncomeTracker'
 import PieChart from '../components/MainPage/PieChart'
 import Trackers from '../components/MainPage/Trackers'
-
-
-//check if  jwt is expired ~
-//get user info 
-    //check if we have current user info ~
-    //if not use jwt to get current user cred from BE
-
+import { updateUserIncome } from '../redux/slice/income'
 
 function Main() {
     const {user} = useSelector(state=>state.user)
@@ -36,7 +30,16 @@ function Main() {
                     console.log(cookie.data)
                     axios.get("http://localhost:3001/main/currentUser",{headers : {"Authorization" : `Bearer ${cookie.data}`}})
                     .then(res => {
-                        dispatch(addUser(res.data))
+
+                        const user = {
+                            _id: res.data._id,
+                            Email: res.data.Email,
+                            FireBaseID: res.data.FireBaseID,
+                            UserName: res.data.UserName
+                        }
+
+                        dispatch(addUser(user))
+                        dispatch(updateUserIncome(res.data.income[0].Income)) 
                     })
                     .catch(error => {console.log(error)})
                 }
@@ -44,7 +47,6 @@ function Main() {
             }catch(err){
                 console.log(err)
             }
-            
         }else{
             navigate('/accounts/signin')
         }
