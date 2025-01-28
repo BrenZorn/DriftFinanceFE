@@ -19,31 +19,27 @@ function Main() {
     const navigate = useNavigate()
     const dispatch = useDispatch()
     useEffect(()=>{
+        
         const isTokenExpired = isCookieExpired("JWT")
         if(!isTokenExpired){
             try{
-                if(user.email){
-                    return
-                }else{
-                    const cookieValue = Cookies.get("JWT");
-                    let cookie = JSON.parse(cookieValue)
-                    console.log(cookie.data)
-                    axios.get("http://localhost:3001/main/currentUser",{headers : {"Authorization" : `Bearer ${cookie.data}`}})
-                    .then(res => {
-
-                        const user = {
-                            _id: res.data._id,
-                            Email: res.data.Email,
-                            FireBaseID: res.data.FireBaseID,
-                            UserName: res.data.UserName
-                        }
-
-                        dispatch(addUser(user))
-                        dispatch(updateUserIncome(res.data.income[0].Income)) 
-                    })
-                    .catch(error => {console.log(error)})
-                }
-                
+                const cookieValue = Cookies.get("JWT");
+                let cookie = JSON.parse(cookieValue)
+                console.log(cookie.data)
+                console.log('first')
+                axios.get("http://localhost:3001/main/currentUser",{headers : {"Authorization" : `Bearer ${cookie.data}`}})
+                .then(res => {
+                    const user = {
+                        _id: res.data._id,
+                        Email: res.data.Email,
+                        FireBaseID: res.data.FireBaseID,
+                        UserName: res.data.UserName
+                    }
+                    dispatch(addUser(user))
+                    dispatch(updateUserIncome(res.data.income[0].Income))
+                    console.log('first') 
+                })
+                .catch(error => {console.log(error)})
             }catch(err){
                 console.log(err)
             }

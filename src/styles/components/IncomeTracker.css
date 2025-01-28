@@ -159,4 +159,28 @@
   cursor: not-allowed;
   opacity: 0.6;
   box-shadow: none;
+}
+.IncomeTrackerContainer .RemainingIncomeContainer {
+  margin-top: 25px;
+  padding-left: 20px;
+  padding-bottom: 10px;
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  border: 1px solid #2a2a2a;
+  transition: all 0.3s ease;
+  margin-left: 25px;
+  width: 80%;
+  max-width: 350px;
+}
+.IncomeTrackerContainer .RemainingIncomeContainer:hover {
+  background-color: #252525;
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+}
+.IncomeTrackerContainer .RemainingIncomeContainer p {
+  font-size: 25px;
+  font-weight: normal;
+  margin-bottom: 16px;
 }/*# sourceMappingURL=IncomeTracker.css.map */

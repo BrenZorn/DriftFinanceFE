@@ -52,7 +52,7 @@ function IncomeTracker() {
               userIncome == 0 && 
               <div className='IncomeContainer'>
                 <input placeholder='income' onChange={(e)=>{setIncome(e.target.value)}}></input>
-                <button  onClick={(e)=>{e.preventDefault(); updateIncome()}}>Add</button>
+                <button className='AddButton' onClick={(e)=>{e.preventDefault(); updateIncome()}}>Add</button>
                 {
                   error && <p>Must enter a number</p>
                 }
