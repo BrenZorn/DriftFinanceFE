@@ -21,7 +21,7 @@
             font-size: 25px;
         }
         .IncomeContainer{
-            height: 100px;
+            height: 100%;
             p {
                 font-size: 25px;
                 font-weight: normal;
@@ -165,6 +165,9 @@
                   opacity: 0.6;
                   box-shadow: none;
                 }
+            }
+            .ErrorMessage{
+              font-size: 20px;
             }
         }
     }

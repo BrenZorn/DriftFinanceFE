@@ -50,7 +50,7 @@ function Create() {
           <input type='password' onChange={(e)=>setConfirmPassword(e.target.value)} placeholder='Confirm Password'></input>
           <div className='ButtonCard'>
             <button className='CreatAccount' onClick={(e)=>{e.preventDefault()}}>Create Account</button>
-            <a className='Login' href='/accounts?section=signin'>Login</a>
+            <a className='Login' href='/accounts/signin'>Login</a>
           </div>
         </form>
       </div>

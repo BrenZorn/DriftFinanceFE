@@ -12,7 +12,7 @@ function IncomeTracker() {
   const [update, setUpdate] = useState(false)  
   const dispatch = useDispatch()
   const {userIncome} = useSelector(state => state.userIncome)
-
+  const [zeroError, setZeroError] = useState(false)
 
   const updateIncome = async () => {
     function isNumeric(str) {
@@ -21,11 +21,19 @@ function IncomeTracker() {
     }
     let number = isNumeric(income)
     if(number){
+
+      if(income == 0 ){
+        console.log('first')
+        setError(false)
+        setZeroError(true)
+      }
+
       const cookieValue = Cookies.get("JWT");
       let cookie = JSON.parse(cookieValue)
       try{
         let request = await axios.post('http://localhost:3001/main/updateIncome',{Income: income},{headers : {"Authorization" : `Bearer ${cookie.data}`}})
         if(request.status == 200){
+          console.log('first')
           dispatch(updateUserIncome(income))
           if(update){
             setUpdate(false)
@@ -38,6 +46,7 @@ function IncomeTracker() {
         console.log(error)
       }
     }else{
+      setZeroError(false)
       setError(true)
       console.log('error')
     }
@@ -69,11 +78,15 @@ function IncomeTracker() {
                     <input className='IncomeInput' placeholder='income' onChange={(e)=>{setIncome(e.target.value)}}></input>
                     <div className='ButtonContainer'>
                       <button className='AddButton' onClick={(e)=>{e. preventDefault(); updateIncome();}}>Add</button>
-                      <button className='CancelButton' onClick={(e)=>{e.  preventDefault(); setUpdate(false)}}>Cancel</button>
+                      <button className='CancelButton' onClick={(e)=>{e.  preventDefault(); setError(false); setZeroError(false); setUpdate(false);}}>Cancel</button>
                     </div>
-                    {
-                      error && <p>Must enter a number</p>
+                    { 
+                      error && <p className='ErrorMessage'>Must enter a number</p>
                     }
+                    { 
+                      zeroError && <p className='ErrorMessage'>Must enter a number above 0</p>
+                    }
+
                   </div> 
                   : 
                   <div className='IncomeContainer'>

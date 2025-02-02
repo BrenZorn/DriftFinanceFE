@@ -56,8 +56,8 @@ function Landing() {
             </div>
             <div className='AccountCard'>
                 <div className='Container'>
-                    <a href='/accounts?section=create' className='Create'>Creat Account</a>
-                    <a href='/accounts?section=login' className='Login'>Login</a> 
+                    <a href='/accounts/create' className='Create'>Creat Account</a>
+                    <a href='/accounts/signin' className='Login'>Login</a> 
                 </div>
             </div>
         </div>
