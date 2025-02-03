@@ -2,6 +2,7 @@
 @use './components/Authentication';
 @use './pages/Landing';
 @use './components/IncomeTracker';
+@use './components/Trackers';
 
 body{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;

@@ -324,6 +324,188 @@
   margin-bottom: 16px;
 }
 
+.CreateTrackerContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 0.2s;
+}
+@keyframes fadeInOpacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.CreateTrackerContainer .TrackerContainer {
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+  padding: 24px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+.CreateTrackerContainer .TrackerContainer .ClosePopUpButton {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  background-color: #ff4c4c;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.CreateTrackerContainer .TrackerContainer .ClosePopUpButton:hover {
+  background-color: #d43f3f;
+  transform: scale(1.1);
+}
+.CreateTrackerContainer .TrackerContainer .ClosePopUpButton:active {
+  transform: scale(0.9);
+}
+.CreateTrackerContainer .TrackerContainer .TrackerContentContainer {
+  background-color: #292929;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: inset 0 0 12px rgba(255, 255, 255, 0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  max-width: 500px;
+  margin: auto;
+  color: #e0e0e0;
+  transition: all 0.3s ease;
+}
+.CreateTrackerContainer .TrackerContainer .TrackerContentContainer label {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+.CreateTrackerContainer .TrackerContainer .TrackerContentContainer input[type=button] {
+  width: 90%;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.CreateTrackerContainer .TrackerContainer .TrackerContentContainer input[type=button]:hover {
+  transform: scale(1.05);
+}
+.CreateTrackerContainer .TrackerContainer .TrackerContentContainer input[type=button]:active {
+  transform: scale(0.95);
+}
+.CreateTrackerContainer .TrackerContainer .TrackerContentContainer input[type=text] {
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+  border: 1px solid #444;
+  border-radius: 6px;
+  padding: 10px;
+  font-size: 16px;
+  width: 90%;
+  transition: border-color 0.3s;
+}
+.CreateTrackerContainer .TrackerContainer .TrackerContentContainer input[type=text]:focus {
+  border-color: #00c4cc;
+  outline: none;
+}
+.CreateTrackerContainer .TrackerContainer .TrackerContentContainer .CreateButton {
+  background-color: #00c4cc;
+}
+.CreateTrackerContainer .TrackerContainer .TrackerContentContainer .CreateButton:hover {
+  background-color: #02969b;
+}
+.CreateTrackerContainer .TrackerContainer .TrackerContentContainer .AddItemButton {
+  background-color: #07ad15;
+}
+.CreateTrackerContainer .TrackerContainer .TrackerContentContainer .AddItemButton:hover {
+  background-color: #038a09;
+}
+.CreateTrackerContainer .TrackerContainer .TrackerContentContainer .tracker-items-container {
+  background-color: #1e1e1e;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: inset 0 0 8px rgba(255, 255, 255, 0.1);
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 0.25s;
+}
+@keyframes fadeInOpacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.CreateTrackerContainer .TrackerContainer .TrackerContentContainer .tracker-items-container div {
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+.CreateTrackerContainer .TrackerContainer .TrackerContentContainer .tracker-items-container div label {
+  flex-basis: 100%;
+  text-align: start;
+  padding-left: 30px;
+}
+.CreateTrackerContainer .TrackerContainer .TrackerContentContainer .tracker-items-container div input[type=text] {
+  width: 70%;
+}
+.CreateTrackerContainer .TrackerContainer .TrackerContentContainer .tracker-items-container div .Add {
+  margin-top: 25px;
+}
+.CreateTrackerContainer .TrackerContainer .TrackerContentContainer .tracker-items-container input[type=text] {
+  width: 100%;
+}
+.CreateTrackerContainer .TrackerContainer .TrackerContentContainer .tracker-items-container .Add {
+  background-color: #07ad15;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 45%;
+}
+.CreateTrackerContainer .TrackerContainer .TrackerContentContainer .tracker-items-container .Add:hover {
+  background-color: #038a09;
+}
+.CreateTrackerContainer .TrackerContainer .TrackerContentContainer .tracker-items-container .Close {
+  background-color: #cc001b;
+  width: 40%;
+}
+.CreateTrackerContainer .TrackerContainer .TrackerContentContainer .tracker-items-container .Close:hover {
+  background-color: #920215;
+}
+
 body {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   background-color: #031022;

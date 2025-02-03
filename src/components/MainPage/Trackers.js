@@ -12,46 +12,20 @@ function Trackers() {
   const dispatch = useDispatch()
 
   const {createTrackerToggle} = useSelector(state => state.trackers)
-  console.log(createTrackerToggle)
-  //create tracker pop up 
+  //create tracker pop up *
   //add items to trackers new tracker
   //post tracker data to db
   //retrive all tracker data realted to the user and display it
  
-  
-
-  const CreateTracker = () => {
-    // function to create new trackers
-    return(<div className='CreateTrackerContainer'>
-      <input value='x' type='button' onClick={()=>dispatch(updateCreateTracker(false))}></input>
-      <div className=''>
-          <div className='TrackerContainer'>
-              <label>Tracker Name</label>
-              <input type='text' placeholder='Tracker Name' onChange={(e)=>setTrackerName(e.target.value)}></input>
-              <input type='text' placeholder='Add Item'></input>
-              {
-                  addItem &&
-                  <div>
-                      <label>Amount</label>
-                      <input type='text' placeholder='Amount' onChange={(e)=>setAmount(e.target.value)} ></input>
-                      <input type='button' value='Add' onClick={()=>{}}></input>
-                  </div>
-              }
-              <input type='button' value='Create Tracker' onClick={()=>{}}></input>
-          </div>
-      </div>
-  </div>)
-  }
-  
-
   return (
     <div>
       {
-        createTrackerToggle && <CreateTracker />
-      }
+        createTrackerToggle ? <CreateTracker /> :
       <div>
         <input type='button' value='Add Tracker' onClick={()=>dispatch(updateCreateTracker(true))}></input>
       </div>
+      }
+      
       <div className='TrackersContainer'>
         <div className='TrackerContainer'>
           <h1>Tracker Name</h1>
