@@ -13,7 +13,7 @@ function Trackers() {
 
   const {createTrackerToggle} = useSelector(state => state.trackers)
   //create tracker pop up *
-  //add items to trackers new tracker
+  //add items to trackers new tracker*
   //post tracker data to db
   //retrive all tracker data realted to the user and display it
  

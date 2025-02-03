@@ -446,7 +446,7 @@
 .CreateTrackerContainer .TrackerContainer .TrackerContentContainer .AddItemButton:hover {
   background-color: #038a09;
 }
-.CreateTrackerContainer .TrackerContainer .TrackerContentContainer .tracker-items-container {
+.CreateTrackerContainer .TrackerContainer .TrackerContentContainer .tracker-items-form-container {
   background-color: #1e1e1e;
   padding: 15px;
   border-radius: 8px;
@@ -470,40 +470,57 @@
     opacity: 1;
   }
 }
-.CreateTrackerContainer .TrackerContainer .TrackerContentContainer .tracker-items-container div {
+.CreateTrackerContainer .TrackerContainer .TrackerContentContainer .tracker-items-form-container div {
   justify-content: center;
   display: flex;
   flex-wrap: wrap;
 }
-.CreateTrackerContainer .TrackerContainer .TrackerContentContainer .tracker-items-container div label {
+.CreateTrackerContainer .TrackerContainer .TrackerContentContainer .tracker-items-form-container div label {
   flex-basis: 100%;
   text-align: start;
   padding-left: 30px;
 }
-.CreateTrackerContainer .TrackerContainer .TrackerContentContainer .tracker-items-container div input[type=text] {
+.CreateTrackerContainer .TrackerContainer .TrackerContentContainer .tracker-items-form-container div input[type=text] {
   width: 70%;
 }
-.CreateTrackerContainer .TrackerContainer .TrackerContentContainer .tracker-items-container div .Add {
+.CreateTrackerContainer .TrackerContainer .TrackerContentContainer .tracker-items-form-container div .Add {
   margin-top: 25px;
 }
-.CreateTrackerContainer .TrackerContainer .TrackerContentContainer .tracker-items-container input[type=text] {
+.CreateTrackerContainer .TrackerContainer .TrackerContentContainer .tracker-items-form-container input[type=text] {
   width: 100%;
 }
-.CreateTrackerContainer .TrackerContainer .TrackerContentContainer .tracker-items-container .Add {
+.CreateTrackerContainer .TrackerContainer .TrackerContentContainer .tracker-items-form-container .Add {
   background-color: #07ad15;
   padding-left: 20px;
   padding-right: 20px;
   width: 45%;
 }
-.CreateTrackerContainer .TrackerContainer .TrackerContentContainer .tracker-items-container .Add:hover {
+.CreateTrackerContainer .TrackerContainer .TrackerContentContainer .tracker-items-form-container .Add:hover {
   background-color: #038a09;
 }
-.CreateTrackerContainer .TrackerContainer .TrackerContentContainer .tracker-items-container .Close {
+.CreateTrackerContainer .TrackerContainer .TrackerContentContainer .tracker-items-form-container .Close {
   background-color: #cc001b;
   width: 40%;
 }
-.CreateTrackerContainer .TrackerContainer .TrackerContentContainer .tracker-items-container .Close:hover {
+.CreateTrackerContainer .TrackerContainer .TrackerContentContainer .tracker-items-form-container .Close:hover {
   background-color: #920215;
+}
+.CreateTrackerContainer .TrackerContainer .TrackerContentContainer .TrackerItemsContainer {
+  max-height: 150px;
+  min-width: 149px;
+  overflow-y: auto;
+  width: 90%;
+}
+.CreateTrackerContainer .TrackerContainer .TrackerContentContainer .TrackerItemsContainer li {
+  list-style: none;
+  border-radius: 5px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+.CreateTrackerContainer .TrackerContainer .TrackerContentContainer .TrackerItemsContainer li:nth-child(odd) {
+  background: #313131;
 }
 
 body {

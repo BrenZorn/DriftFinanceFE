@@ -128,7 +128,7 @@
                 }
             }
           
-            .tracker-items-container {
+            .tracker-items-form-container {
                 background-color: #1e1e1e;
                 padding: 15px;
                 border-radius: 8px;
@@ -187,6 +187,23 @@
                 &:hover {
                   background-color: #920215;
                 }
+              }
+            }
+            .TrackerItemsContainer{
+              max-height: 150px;
+              min-width: 149px;
+              overflow-y: auto;
+              width: 90%;
+              li{
+                list-style: none;
+                border-radius: 5px;
+                margin-top: 20px;
+                margin-bottom: 20px;
+                padding-top: 2px;
+                padding-bottom: 2px;
+              }
+              li:nth-child(odd){
+                background: #313131;
               }
             }
         }
