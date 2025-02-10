@@ -1,12 +1,13 @@
 import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { addItemToTracker, resetTrackerState, updateAddTrackerItemsToggle, updateCreateTracker } from '../../redux/slice/trackers'
+import { addItemToTracker, resetTrackerState, updateAddTrackerItemsToggle, updateCreateTracker, updateTrackerName } from '../../redux/slice/trackers'
+import axios from 'axios'
+import Cookies from 'js-cookie';
 
 function CreateTracker() {
 
   const [expenseName, setExpenseName] = useState()
   const [amount, setAmount] = useState()
-  const [trackerName, setTrackerName] = useState()
 
     const dispatch = useDispatch()
     const {addTrackerItemsToggle} = useSelector(state => state.trackers)
@@ -35,9 +36,16 @@ function CreateTracker() {
 
   }
 
-  const createTracker = () => {
+  const createTracker = async () => {
     //make sure tracker has all its data, post it to the BE 
-    console.log('create tracker')
+    if(tracker.name == ""){
+      console.log('please enter a name***')
+      return
+    }
+    const cookieValue = Cookies.get("JWT");
+    let cookie = JSON.parse(cookieValue)
+    let request = await axios.post("http://localhost:3001/main/createTracker", {Tracker: tracker}, {headers : {"Authorization" : `Bearer ${cookie.data}`}})
+    console.log(request)
   }
 
     return(
@@ -46,7 +54,7 @@ function CreateTracker() {
         <input value='x' type='button' className='ClosePopUpButton' onClick={()=>closePopUp()}></input>
         <div className='TrackerContentContainer'>
                 <label>Create New Tracker</label>
-                <input type='text' placeholder='Tracker Name' onChange={(e)=>{setTrackerName(e.target.value)}}></ input>
+                <input type='text' placeholder='Tracker Name' onChange={(e)=>{dispatch(updateTrackerName(e.target.value))}}></ input>
                 {
                   addTrackerItemsToggle ?
                   <div className='tracker-items-form-container'>
